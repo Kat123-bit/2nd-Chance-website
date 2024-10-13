@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abstimmung</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="content">
+    <h1>Wow du hast wirklich den QR Code gescannt.</h1>
+    <p>Gibst du uns noch eine Chance?</p>
+    <p>Ich habe lange überlegt, ob es zu früh ist, dich das zu fragen. Aber ich will nicht warten. Bitte gib uns noch eine Chance, wir müssen nochmal sprechen. Meine Tür steht dir hier in Altdorf immer offen, du bist jederzeit herzlich willkommen, der Schlüssel liegt auf der Fensterbank unter dem Blumentopf. Bitte komm vorbei <3
+        P.S. Ich hab lange rumexperimentiert mit der Website und bin mir immer noch nicht sicher, ob es funktioniert und wie ich das Ergebnis sehen kann. Vielleicht kannst du dich ja bei mir melden. Ich hab mir auf jeden Fall Mühe gegeben. 
+        </p>
+    <!-- Drei Abstimmungsoptionen -->
+    <button onclick="vote('Ja')">Ja</button>
+    <button onclick="vote('Nein')">Nein</button>
+    <button onclick="vote('Vielleicht')">Vielleicht</button>
+    <div id="results">
+      <h2>Ergebnisse</h2>
+      <p id="result1">Option 1: 0 Stimmen</p>
+      <p id="result2">Option 2: 0 Stimmen</p>
+      <p id="result3">Option 3: 0 Stimmen</p>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+  <!-- Firebase-Konfiguration -->
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAl-eG5EQTN-0Se8H3eInyvsBKeURhtOjs",
+    authDomain: "umfrage-9b99b.firebaseapp.com",
+    projectId: "umfrage-9b99b",
+    storageBucket: "umfrage-9b99b.appspot.com",
+    messagingSenderId: "38714441655",
+    appId: "1:38714441655:web:ebac273b115904805a3232"
+}; 
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
